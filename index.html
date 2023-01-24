@@ -36,7 +36,7 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>
-                        Born in Lima Peru, raised in France and studying in Florida. Since adding Computer Science as a major in fall 2021, I have developped a passion for the art of programming. While being a college student can sometimes be very time-consuming, I like to work on fun personal projects and learn about frameworks/databases when I have free time.
+                        I was born in Peru, raised in France, and am currently studying in Florida. Since adding Computer Science as a major in fall 2021, I have developped a passion for the art of programming. While being a college student can sometimes be very time consuming, I like to work on fun personal projects and learn about frameworks and databases when I have free time.
                     </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')"> Programming Skills</p>
@@ -46,7 +46,7 @@
                     <div class= "tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Languages:</span><br>C++, Java, HTML, CSS, JavaScript</li>
-                            <li><span>Frameworks/Libraries:</span><br>SFML, Swing,Spring Boot, Java Servlets</li>
+                            <li><span>Frameworks/Libraries:</span><br>SFML, Swing, Spring Boot, Java Servlets</li>
                             <li><span>Databases:</span><br> MySQL</li>
                         </ul>
                     </div>
@@ -55,12 +55,12 @@
                             <li><span>Florida State University (Expected Graduation: 2024)</span>
                                 <br> B.A in Computer Science and B.S. in Marketing<br>
                             </li>
-                            <li><span>  Involvement:</span><br> Starting Player of the FSU Rugby Team<br>   ACM(Association for Computer Machinery) at FSU</li>
+                            <li><span>  Involvement:</span><br> Starting Player of the FSU Rugby Team<br>Member of the ACM(Association for Computer Machinery) at FSU</li>
                         </ul>
                     </div>
                     <div class= "tab-contents" id="experience">
                         <ul>
-                            <li><span>Legends Hospitality (10/current)</span><br>Currently working part-time as aserver and barback/caterer during special events at the Bobby Bowden stadium in Tallahasse</li>
+                            <li><span>Legends Hospitality (10/22-current)</span><br>Currently working part-time as a server and barback during special events at the Bobby Bowden stadium in Tallahassee.</li>
                             <li><span>Summer Camp Manager (summers of 2020 and 2021)</span><br>Created and managed a summer camp in Miami that registered around 30 kids.</li>
 
                         </ul>
@@ -70,39 +70,8 @@
         </div>
     </div>
 
-    <!-- ---------------------Services-------------------
-
-    
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <h2>Web Design</h2>
-                    <p>
-                        Bla bla blah blablabla
-                    </p>
-                    <a href='#'>Learn More</a>
-                </div>
-                <div>
-                    <h2>UI/UX Design</h2>
-                    <p>
-                        Bla bla blah blablabla
-                    </p>
-                    <a href='#'>Learn More</a>
-                </div>
-                <div>
-                    <h2>App Design</h2>
-                    <p>
-                        Bla bla blah blablabla
-                    </p>
-                    <a href='#'>Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <!-- ---------------------PROJECTS------------------ -->
+
     <div id="projects">
         <div class="container">
             <h1 class="sub-title">Projects</h1>
@@ -155,7 +124,8 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div>   
+        <span id="msg">hello</span>
     </div>
 
     <script>
@@ -179,11 +149,18 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwfrDS-R42HLEVjjpQDlZ1s06ZoCALuTFKst2ZPpSl7epEdm8J7B9rq446gydkpeSpxDw/exec'
         const form = document.forms['submit-to-google-sheet']
+
+        var msg= document.getElementById("msg");
       
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {  form.reset()  })
+            .then(response => { 
+                msg.innerHTML="Message sent successfully";
+                setTimeout(function(){
+                    msg.innerHTML="";
+                },5000);
+                 form.reset()  })
             .catch(error => console.error('Error!', error.message))
         })
       </script>
