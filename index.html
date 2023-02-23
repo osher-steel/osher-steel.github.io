@@ -1,319 +1,172 @@
-*{
-    margin:0;
-    padding:0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Osher Steel</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
 
-}
-html{
-scroll-behavior: smooth;
-}
-body{
-    background: whitesmoke;
-    color: black;
-}
+  <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Osher</span><br>Steel From Miami</h1>
+            </div>
+        </div>
+    </div>
 
-#header{
-    width: 100%;
-    height: 100vh;
-    background-image:url(images/background.png);
-    background-size:cover;
-    background-position:left;
-}
+    <!-- ---------------------ABOUT------------------- -->
 
-.container{
-    padding: 15px 10%;
-}
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Born in Lima Peru, raised in France and studying in Florida. Since adding Computer Science as a major in fall 2021, I have developped a passion for the art of programming. While being a college student can sometimes be very time consuming, I like to work on fun personal projects and learn about frameworks and databases when I have free time.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')"> Programming Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Professional Experience</p>
+                    </div>
+                    <div class= "tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages:</span><br>C++, Java, HTML, CSS, PHP, SQL, JavaScript</li>
+                            <li><span>Frameworks/Libraries:</span><br>SFML, Swing, Git, Java Servlets</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Florida State University (Expected Graduation: May 2024)</span>
+                                <br> B.A in Computer Science and B.S. in Marketing<br>
+                            </li>
+                            <li><span>  Involvement:</span><br> Starting Player of the FSU Rugby Team<br>Member of the ACM(Association for Computer Machinery) at FSU</li>
+                        </ul>
+                    </div>
+                    <div class= "tab-contents" id="experience">
+                        <ul>
+                            <li><span>Legends Hospitality (10/22-current)</span><br>Currently working part-time as a server and barback during special events at the Bobby Bowden stadium in Tallahasse</li>
+                            <li><span>Summer Camp Manager (summers of 2020 and 2021)</span><br>Created and managed a summer camp in Miami that registered around 30 kids.</li>
 
-nav{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap ;
-    position: absolute;
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="images/stratego.png" class="stratego">
+                    <div class="layer">
+                        <div class="text">
+                            <h3>Stratego Networked</h3>
+                            <p>A java GUI implementation of the board game Stratego that can be played on 2 computers. Making this game reinforced my knowledge of Socket Networking, Multithreading, Swing Elements and other Java concepts. </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/checkers.png">
+                    <div class="layer">
+                        <div class="text">
+                            <h3>Checkers Application</h3>
+                            <p>A checkers desktop application written in C++ using SFML</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/tetris.png">
+                    <div class="layer">
+                        <div class="text">
+                            <h3>Tetris</h3>
+                            <p>A tetris desktop application written in Java using Swing Components</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    margin-left: -10%;
-}
+    <!-- ---------------------CONTACT------------------- -->
 
-.logo{
-    width:140px;
-}
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-inbox"></i>oshersteel@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>786-445-3842</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/osher-steel"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/osher-steel-9b1740226/"><i class="fa-brands fa-linkedin"></i></i></a>
+                    </div>
+                    <a href="images/resume.pdf" class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn formbtn">Submit</button>
 
-nav ul li{
-    display: inline-block;
-    list-style:none;
-    margin:0 10px;
-}
+                    </form>
+                </div>
+            </div>
+        </div>
+        <span id="msg"></span>
+    </div>
 
-nav ul li a{
-    color: black;
-    font-style: bold;
-    text-decoration:none;
-    font-size:18px;
-    position: relative;
-}
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
 
-nav ul li a::after{
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
 
-    content:'';
-    width:0;
-    height:3px;
-    background: aqua;
-    position:absolute;
-    left:0;
-    bottom: -6px;
-    transition:0.5s;
-}
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/31d4f0f13d.js" crossorigin="anonymous"></script>
 
-nav ul li a:hover:after{
-    width:100%
-}
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwfrDS-R42HLEVjjpQDlZ1s06ZoCALuTFKst2ZPpSl7epEdm8J7B9rq446gydkpeSpxDw/exec'
+        const form = document.forms['submit-to-google-sheet']
 
-.header-text{
-    margin:20% 1% 0 -8%;
-    font-size: 30px;
-
-}
-
-.header-text h1 span{
-    color:aqua;
-}
-
-/* ------------------ABOUT------------- */
-
-#about{
-    padding:5% 0;
-    color:grey;
-
-}
-
-.row{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-}
-
-.about-col-1{
-    flex-basis: 35%;
-}
-
-.about-col-1 img{
-    width:100%;
-    border-radius: 15px;
-}
-
-.about-col-2{
-    flex-basis: 60%;;
-}
-
-.sub-title{
-    font-size: 60px;
-    font-weight: 600;
-    color: lightblue;
-}
-
-.tab-titles{
-    display:flex;
-    margin: 40px 0 20px;
-}
-
-.tab-links{
-    margin-right:50px;
-    font-size: 18px;
-    font-weight:500;
-    cursor:pointer;
-    position:relative;
-}
-
-.tab-links::after{
-    content:'';
-    width:0;
-    height:3px;
-    background-color: lightblue;
-    position:absolute;
-    left:0;
-    bottom: -8px;
-    transition:0.5s;
-}
-
-.tab-links:hover:after{
-    width:50%;
-
-}
-
-.tab-contents ul li{
-    list-style: name;
-    list-style-type: none;
-    margin: 10px 0;
-}
-
-.tab-contents ul li span{
-    color:lightblue;
-    font-size: 14px;
-}
-
-.tab-contents{
-    display: none;
-}
-
-.tab-contents.active-tab{
-    display:block;
-}
-
-/* ------------Projects---------- */
-
-#projects{
-    padding: 50px,0;
-}
-
-#projects h1{
-    text-align: center;
-}
-.project-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap:40px;
-    margin-top: 100px;
-    margin-right: 10px;
-    color:black;
-}
-
-.project{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.project h3{
-    font-style:bold;
-}
-
-.project img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    display:block;
-    transition:transform 0.5s;
-    transform:scale(1.03);
-}
-
-
-.layer{
-    width:100%;
-    height: 0;
-    background:linear-gradient(rgba(255, 254, 254, 0.6),lightblue);
-    border-radius: 10px;
-    position:absolute;
-    left:0;
-    bottom:0;
-    overflow: hidden;
-    display:flex;
-    flex-direction: column;
-    padding:0, 40px;
-    text-align: left;
-    font-size: 20px;
-    transition:height 0.5s;
-}
-
-.layer .text{
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 20%;
-    text-align: center;
-    font-weight: 500;
-
-}
-
-.layer h3{
-    font-weight: 800;
-    margin-bottom: 20px;
-    font-size:25px;
-    text-decoration-line:underline;
-}
-
-.project:hover img{
-    transform: scale(1.1);
-}
-
-.project:hover .layer{
-    height:100%;
-}
-
-/* --------------------CONTACT-------------- */
-
-#contact{
-    padding-top:100px;
-}
-.contact-left{
-    flex-basis: 35%;
-}
-.contact-right{
-    flex-basis: 60%;
-} 
-
-.contact-left p{
-    margin-top: 30px;
-}
-
-.contact-left p i{
-    color: darkblue;
-    margin-right: 15px;
-    font-size: 25px;
-}
-
-.btn{
-    display: inline-block;
-    width:fit-content;
-    margin-top: 20px;
-    background-color:lightblue;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: black;
-    transition: background 0.5s;
-}
-
-.social-icons{
-    margin-top: 30px;
-}
-
-.social-icons a{
-    margin-top: 10px;
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: darkblue;
-    display: inline-block;
-    transition: transform(0.5s);
-}
-
-.social-icons a:hover{
-    color:lightblue;
-    transform: translateY(-5px);
-}
-
-.contact-right form{
-    width:100%;
-}
-
-form input, form textarea{
-    width:100%;
-    border:0;
-    outline:none;
-    background:white;
-    border-color: black;
-    padding:15px;
-    margin: 15px 0;
-    color: black;
-    font-size: 18px;
-    border-radius: 6px;
-
-}
-
-form .formbtn{
-    padding:14px 60px;
-    font-size:18px;
-    margin-top: 20px;
-    cursor:pointer;
-    outline: none;
-}
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => { 
+                msg.innerHTML="Message sent successfully";
+                setTimeout(function(){
+                    msg.innerHTML="";
+                },5000);
+                 form.reset()  })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+  </body>
+</html>
